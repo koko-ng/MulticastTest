@@ -17,12 +17,14 @@ public class MulticastServer {
    }
 
    public static void main(String[] args) throws IOException {
-      sendUDPMessage("This is a multicast messge", "230.0.0.0",
-         4321);
+       String ipAddress = "239.192.0.0";
+    int port = 9875;
+    sendUDPMessage("This is a multicast messge", ipAddress,
+              port);
       sendUDPMessage("This is the second multicast messge",
-         "230.0.0.0", 4321);
+         ipAddress, port);
       sendUDPMessage("This is the third multicast messge",
-         "230.0.0.0", 4321);
-      sendUDPMessage("OK", "230.0.0.0", 4321);
+         ipAddress, port);
+      sendUDPMessage("OK", ipAddress, port);
    }
 }
